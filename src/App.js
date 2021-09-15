@@ -8,6 +8,7 @@ import {
 import { DataProvider } from "./contexts/DataContext";
 import AppBar from "./components/AppBar";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <></>
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </DataProvider>
   );
