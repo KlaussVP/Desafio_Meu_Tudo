@@ -14,6 +14,9 @@ const HeaderContainer = styled.header`
 
   .bell-icon {
     align-self: flex-start;
+    font-size: 23px;
+    margin-top: 9px;
+    margin-right: 5px;
   }
 
   .expand {
