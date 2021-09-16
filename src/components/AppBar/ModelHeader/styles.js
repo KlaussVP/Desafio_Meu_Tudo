@@ -9,6 +9,7 @@ const ModelContainer = styled.header`
   align-items: flex-start;
   color: #FFF;
   padding: 10px 35px 10px 10px;
+  margin-bottom: 30px;
 
   .arrow-icon {
     font-size: 27px;

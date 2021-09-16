@@ -2,13 +2,26 @@ import styled from "styled-components";
 
 const Container = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 300px;
-  width: 300px;
-  background: #FF0000;
-  font-size: 4rem;
-  font-weight: 700;
+  padding: 0 15px;
+
+  h1 {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+  }
 `;
 
-export default Container;
+const Loans = styled.article`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 7px;
+  padding-left: 1px;
+`;
+
+export { 
+  Container,
+  Loans
+};
