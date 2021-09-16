@@ -6,11 +6,24 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-bottom: 30px;
   border-bottom-right-radius: 45px;
   background: #000;
   height: 164px;
   width: 100%;
   color: #FFF;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    margin-left: 10px;
+    align-self: flex-start;
+
+    img {
+      height: 100%;
+    }
+  }
 
   .bell-icon {
     align-self: flex-start;
@@ -25,7 +38,7 @@ const HeaderContainer = styled.header`
     justify-content: center;
     align-items: center;
     bottom: -17.5px;
-    left: 45%;
+    left: 48%;
     background: #D22688;
     height: 35px;
     width: 35px;
