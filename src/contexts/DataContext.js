@@ -6,6 +6,7 @@ export default DataContext;
 export function DataProvider({ children }) {
   const [margins, setMargins] = useState({});
   const [chosenValue, setChosenValue] = useState(0);
+  const [chosenPeriod, setChosenPeriod] = useState(0);
 
   return (
     <DataContext.Provider value={
@@ -13,7 +14,9 @@ export function DataProvider({ children }) {
         margins,
         setMargins,
         chosenValue,
-        setChosenValue
+        setChosenValue,
+        chosenPeriod,
+        setChosenPeriod
       }
     }>
       {children}
