@@ -7,8 +7,9 @@ import {
 
 import { DataProvider } from "./contexts/DataContext";
 import AppBar from "./components/AppBar";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Values from "./pages/Values";
 
 export default function App() {
   return (
@@ -17,9 +18,7 @@ export default function App() {
         <AppBar />
         <Switch>
           <Route path="/" component={Home} exact/>
-          <Route path="/values" exact>
-            <></>
-          </Route>
+          <Route path="/values" component={Values} exact />
           <Route path="/period" exact>
             <></>
           </Route>
