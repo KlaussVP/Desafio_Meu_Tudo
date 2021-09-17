@@ -19,6 +19,7 @@ const MenuOption = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${({ isSelected }) => isSelected ? "#D22688" : "#000000"};
+  position: relative;
 
   .contracts {
     transform: rotate(180deg);
@@ -40,6 +41,16 @@ const MenuOption = styled.div`
     font-size: 10px;
     line-height: 13px;
     font-weight: 500;
+  }
+
+  .notification {
+    position: absolute;
+    top: -1px;
+    right: 12px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #D22688;
   }
 `;
 

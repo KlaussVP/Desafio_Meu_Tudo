@@ -8,17 +8,17 @@ import { currencyToNumber } from "../../utils/helpers";
 import { useHistory } from "react-router";
 
 export default function Values() {
-  // const [values, setValues] = useState([]);
+  const [values, setValues] = useState([]);
   const [otherValue, setOtherValue] = useState("");
   const { chosenValue, setChosenValue } = useContext(DataContext);
   const history = useHistory();
 
-  // useEffect(() => {
-  //   axios.get(`https://demo7273790.mockable.io/suggestedvalues`)
-  //   .then(resp => {
-  //     setValues(resp.data.suggestedValues);
-  //   })
-  // },[]);
+  useEffect(() => {
+    axios.get(`https://demo7273790.mockable.io/suggestedvalues`)
+    .then(resp => {
+      setValues(resp.data.suggestedValues);
+    })
+  },[]);
 
   function handleChoosing(choosedValue) {
     const numberValue = currencyToNumber(choosedValue);
@@ -32,8 +32,6 @@ export default function Values() {
     console.log(chosenValue);
     console.log(typeof(chosenValue));
   }
-
-  const values = [200, 2270, 4350, 6432.2917];
 
   return (
     <ValuesPage onSubmit={e => sendValue(e)}>
