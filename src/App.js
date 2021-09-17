@@ -10,6 +10,7 @@ import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Values from "./pages/Values";
+import Period from "./pages/Period";
 
 export default function App() {
   return (
@@ -19,9 +20,7 @@ export default function App() {
         <Switch>
           <Route path="/" component={Home} exact/>
           <Route path="/values" component={Values} exact />
-          <Route path="/period" exact>
-            <></>
-          </Route>
+          <Route path="/period" component={Period} exact />
           <Route path="/result" exact>
             <></>
           </Route>

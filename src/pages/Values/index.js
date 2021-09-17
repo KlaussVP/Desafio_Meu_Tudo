@@ -8,8 +8,8 @@ import { currencyToNumber } from "../../utils/helpers";
 import { useHistory } from "react-router";
 
 export default function Values() {
-  // const [values, setValues] = useState({});
-  const [otherValue, setOtherValue] = useState(null);
+  // const [values, setValues] = useState([]);
+  const [otherValue, setOtherValue] = useState("");
   const { chosenValue, setChosenValue } = useContext(DataContext);
   const history = useHistory();
 
@@ -21,22 +21,22 @@ export default function Values() {
   // },[]);
 
   function handleChoosing(choosedValue) {
-    console.log(choosedValue);
     const numberValue = currencyToNumber(choosedValue);
     setChosenValue(numberValue);
     setOtherValue(numberValue);
   }
 
-  function sendValue(v) {
-    v.preventDefault();
-    console.log(chosenValue);
+  function sendValue(e) {
+    e.preventDefault();
     history.push('/period');
+    console.log(chosenValue);
+    console.log(typeof(chosenValue));
   }
 
   const values = [200, 2270, 4350, 6432.2917];
 
   return (
-    <ValuesPage onSubmit={v => sendValue(v)}>
+    <ValuesPage onSubmit={e => sendValue(e)}>
       <h1>De quanto você precisa?</h1>
       <SuggestedValues>
         {values.map((v, i) => <ValueCard key={i} value={v}/>)}
