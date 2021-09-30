@@ -1,13 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { OptionBoxContainer, UpperBox, LowerBox, Hire } from "./styles";
 import logo from "../../../public/images/tudo-logo-1.png";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 export default function OptionBox({ contractValue, installments, nominalRate }) {
   const parcialAmount = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(contractValue);
-  
+  const dayToMillisecond = 86400000;
+  const installmentsInMilliseconds = parseInt(installments) * 30 * dayToMillisecond;
+  const currentDateInMilliseconds = Date.now();
+  const expirationDateInMilliseconds = currentDateInMilliseconds + installmentsInMilliseconds;
+
+  const formattedCurrentDate = moment(currentDateInMilliseconds).locale('pt-BR').format('LL');
+  const editedDate = formattedCurrentDate.slice(0, formattedCurrentDate.length - 8);
+  const formattedExpirationDate = moment(expirationDateInMilliseconds).locale('pt-BR').format('LL');
+
   return (
     <OptionBoxContainer>
       <UpperBox>
@@ -29,7 +38,7 @@ export default function OptionBox({ contractValue, installments, nominalRate }) 
           <p>Previsão de pagamento</p>
           <AiOutlineQuestionCircle className="question-icon"/>
         </div>
-        <p>19 de maio a 01 de junho de 2020</p>
+        <p>{editedDate} a {formattedExpirationDate}</p>
       </LowerBox>
       <Link to="/">
         <Hire>

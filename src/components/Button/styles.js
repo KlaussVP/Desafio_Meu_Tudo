@@ -4,6 +4,7 @@ const ButtonContainer = styled.div`
   height: 40px;
   width: 166px;
   border-radius: 30px;
+  cursor: pointer;
 
   button {
     width: 100%;
@@ -14,6 +15,7 @@ const ButtonContainer = styled.div`
     border-radius: 30px;
     background: #D22688;
     border: none;
+    cursor: pointer;
   }
   
   p {

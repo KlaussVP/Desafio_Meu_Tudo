@@ -7,6 +7,7 @@ const PeriodCardContainer = styled.div`
   border: none;
   border-radius: 10px;
   box-shadow: 0px 5px 10px #5B5B5B33;
+  cursor: pointer;
 
   input {
     height: 100%;
@@ -21,6 +22,7 @@ const PeriodCardContainer = styled.div`
     font-family: inherit;
     font-size: 16px;
     line-height: 19px;
+    cursor: pointer;
   }
 `;
 

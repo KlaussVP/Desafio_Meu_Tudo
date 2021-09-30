@@ -20,6 +20,7 @@ const MenuOption = styled.div`
   align-items: center;
   color: ${({ isSelected }) => isSelected ? "#D22688" : "#000000"};
   position: relative;
+  cursor: pointer;
 
   .contracts {
     transform: rotate(180deg);
