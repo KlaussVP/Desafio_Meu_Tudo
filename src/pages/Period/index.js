@@ -9,7 +9,7 @@ import { useHistory } from "react-router";
 export default function Period() {
 	const [period, setPeriod] = useState([]);
 	const [otherPeriod, setOtherPeriod] = useState("");
-	const { chosenPeriod, setChosenPeriod } = useContext(DataContext);
+	const { setChosenPeriod } = useContext(DataContext);
 	const history = useHistory();
 
 	useEffect(() => {

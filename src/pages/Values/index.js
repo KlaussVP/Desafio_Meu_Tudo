@@ -10,7 +10,7 @@ import { useHistory } from "react-router";
 export default function Values() {
 	const [values, setValues] = useState([]);
 	const [otherValue, setOtherValue] = useState("");
-	const { chosenValue, setChosenValue } = useContext(DataContext);
+	const { setChosenValue } = useContext(DataContext);
 	const history = useHistory();
 
 	useEffect(() => {
