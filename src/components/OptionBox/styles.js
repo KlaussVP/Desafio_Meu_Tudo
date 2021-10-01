@@ -142,8 +142,8 @@ const Hire = styled.div`
 `;
 
 export {
-  OptionBoxContainer,
-  UpperBox,
-  LowerBox,
-  Hire
+	OptionBoxContainer,
+	UpperBox,
+	LowerBox,
+	Hire
 };

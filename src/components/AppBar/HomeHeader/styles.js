@@ -80,6 +80,6 @@ const HeaderMessage = styled.div`
 `;
 
 export {
-  HeaderContainer,
-  HeaderMessage
-}
+	HeaderContainer,
+	HeaderMessage
+};

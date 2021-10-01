@@ -10,22 +10,22 @@ import icon4 from "../../../public/images/creditCard-2.png";
 import { Container, Loans } from "./styles";
 
 export default function Home() {
-  const { margins, setMargins } = useContext(DataContext);
+	const { setMargins } = useContext(DataContext);
 
-  useEffect(() => {
-    axios.get(`https://demo7273790.mockable.io/margins`)
-    .then(resp => setMargins(resp.data));
-  },[]);
+	useEffect(() => {
+		axios.get("https://demo7273790.mockable.io/margins")
+			.then(resp => setMargins(resp.data));
+	},[]);
 
-  return (
-    <Container>
-      <h1>Oportunidades</h1>
-      <Loans>
-        <Link to="/values"><LoanCard image={icon1} text={"Novo Empréstimo"} limit={6432.29}/></Link>
-        <Link to="#"><LoanCard image={icon2} text={"Portabilidade"} limit={1419.54}/></Link>
-        <Link to="#"><LoanCard image={icon3} text={"Refinanciamento"} limit={0}/></Link>
-        <Link to="#"><LoanCard image={icon4} text={"Cartão de Crédito Consignado"} limit={0}/></Link>
-      </Loans>
-    </Container>
-  );
+	return (
+		<Container>
+			<h1>Oportunidades</h1>
+			<Loans>
+				<Link to="/values"><LoanCard image={icon1} text={"Novo Empréstimo"} limit={6432.29}/></Link>
+				<Link to="#"><LoanCard image={icon2} text={"Portabilidade"} limit={1419.54}/></Link>
+				<Link to="#"><LoanCard image={icon3} text={"Refinanciamento"} limit={0}/></Link>
+				<Link to="#"><LoanCard image={icon4} text={"Cartão de Crédito Consignado"} limit={0}/></Link>
+			</Loans>
+		</Container>
+	);
 }
