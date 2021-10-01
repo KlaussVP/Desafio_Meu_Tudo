@@ -63,7 +63,7 @@ const OtherValue = styled.div`
 `;
 
 export {
-  ValuesPage,
-  SuggestedValues,
-  OtherValue
+	ValuesPage,
+	SuggestedValues,
+	OtherValue
 };

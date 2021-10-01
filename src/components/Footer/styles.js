@@ -56,6 +56,6 @@ const MenuOption = styled.div`
 `;
 
 export {
-  FooterContainer,
-  MenuOption
+	FooterContainer,
+	MenuOption
 };

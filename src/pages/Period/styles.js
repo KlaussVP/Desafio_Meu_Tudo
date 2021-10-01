@@ -63,7 +63,7 @@ const OtherPeriod = styled.div`
 `;
 
 export {
-  PeriodPage,
-  SuggestedInstallments,
-  OtherPeriod
+	PeriodPage,
+	SuggestedInstallments,
+	OtherPeriod
 };

@@ -22,6 +22,6 @@ const Loans = styled.article`
 `;
 
 export { 
-  Container,
-  Loans
+	Container,
+	Loans
 };
