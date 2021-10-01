@@ -12,10 +12,14 @@
 
 ### Para rodar os testes:
 
-1.Rode o comando `npm run test`;
+1. Rode o comando `npm run test`;
 
 * *A interface de testes do cypress abrirá automaticamente.*
 
-2.Clique no arquivo `ui-ux_test.js`.
+2. Clique no arquivo `ui-ux_test.js`.
 
-* *O cypress abrirá o navegador e rodará os testes automaticamente.*
+* *O cypress abrirá o navegador e iniciará os testes automaticamente.*
+
+3. Controle o progresso dos testes avançando passo a passo ou dando play pela interface disponibilizada.
+
+![Cypress_interface_Screenshot](/public/images/screenshot.png)
