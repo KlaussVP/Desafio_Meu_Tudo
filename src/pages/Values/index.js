@@ -29,8 +29,6 @@ export default function Values() {
 	function sendValue(e) {
 		e.preventDefault();
 		history.push("/period");
-		console.log(chosenValue);
-		console.log(typeof(chosenValue));
 	}
 
 	return (

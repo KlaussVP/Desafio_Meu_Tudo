@@ -27,8 +27,6 @@ export default function Period() {
 	function sendPeriod(e) {
 		e.preventDefault();
 		history.push("/result");
-		console.log(chosenPeriod);
-		console.log(typeof(chosenPeriod));
 	}
 
 	return (
